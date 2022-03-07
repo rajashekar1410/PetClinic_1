@@ -1,5 +1,5 @@
 From openjdk:11-jdk-slim
-COPY target/petclinic.war app.war
+COPY target/pc/petclinic.war app.war
 # Port
 EXPOSE 8080
 # Dockerize
