@@ -27,9 +27,8 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: deploy petclikc project
       run: |
-            export RUNNER_ALLOW_RUNASROOT="1"
-            export AGENT_ALLOW_RUNASROOT="1"
-            ./mvnw jetty:run-war 
+           chmod +x mvnw
+           /mvnw jetty:run-war 
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
