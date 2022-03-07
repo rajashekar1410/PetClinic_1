@@ -26,7 +26,10 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: deploy petclikc project
-      run: ./mvnw jetty:run-war 
+      run: |
+            export RUNNER_ALLOW_RUNASROOT="1"
+            export AGENT_ALLOW_RUNASROOT="1"
+            ./mvnw jetty:run-war 
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
