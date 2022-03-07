@@ -28,7 +28,7 @@ jobs:
     - name: deploy petclikc project
       run: |
            chmod +x mvnw
-           /mvnw jetty:run-war 
+           ./mvnw jetty:run-war 
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
