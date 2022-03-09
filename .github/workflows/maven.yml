@@ -71,7 +71,7 @@ jobs:
       run: |
             export RUNNER_ALLOW_RUNASROOT="1"
             export AGENT_ALLOW_RUNASROOT="1"
-            sudo echo "18.234.156.159 fortify.cyberxdemo.com" | sudo tee -a /etc/hosts
+            sudo echo "54.237.217.169 fortify.cyberxdemo.com" | sudo tee -a /etc/hosts
     - name: Perform SAST Scan
       run: scancentral -url ${SC_CONTROLLER_URL} start $BUILD_OPTS -upload -application $APPLICATION -version $VERSION -uptoken $SSC_UPLOAD_TOKEN
       env:                                            
@@ -79,6 +79,6 @@ jobs:
         SSC_UPLOAD_TOKEN: ${{ secrets.SSC_UPLOAD_TOKEN }}
         #SSC_UPLOAD_TOKEN: 516147e5-15ee-4f01-a97a-00ab0b0a589d
         APPLICATION: "PetClinic"
-        VERSION: "1.0"
+        VERSION: "2.0"
         BUILD_OPTS: "-bt mvn"
       
