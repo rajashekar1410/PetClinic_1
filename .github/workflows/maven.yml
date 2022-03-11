@@ -70,6 +70,6 @@ jobs:
         SSC_UPLOAD_TOKEN: ${{ secrets.SSC_UPLOAD_TOKEN }}
         #SSC_UPLOAD_TOKEN: 516147e5-15ee-4f01-a97a-00ab0b0a589d
         APPLICATION: "PetClinic"
-        VERSION: "3.0"
+        VERSION: "4.0"
         BUILD_OPTS: "-bt mvn"
       
